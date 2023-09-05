@@ -1,7 +1,7 @@
 use podcast_db;
 db.dropDatabase();
 
-db.list.insertMany([
+db.podcasts.insertMany([
   {
     "uuid": "f9ef95c3-061e-4162-b122-7077bf8985b0",
         "name": "Men Who Talk",
