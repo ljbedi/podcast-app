@@ -17,17 +17,14 @@ const PodcastContainer = () => {
   //     });
   // }, []);
 
-  const fetchPodcasts = () => {
-    fetch("http://localhost:9000/api/podcasts")
-    .then((res) => res.json())
-    .then((data) => setPodcasts(data));
-
   useEffect(() => {
     fetchPodcasts()
   }, [])
 
-
-
+  const fetchPodcasts = () => {
+    fetch("http://localhost:9000/api/podcasts")
+    .then((res) => res.json())
+    .then((data) => setPodcasts(data));
 
 
   }
@@ -35,8 +32,14 @@ const PodcastContainer = () => {
 
   return (
   <>
-  <h2>{podcast.name}</h2>
+  <h2>Podcasts</h2>
+    {podcasts.map((podcast, index) => (
+      <li>
+        <ul>
+        {podcast.name}
+        {podcast.description}
+        </ul>
+      </li>))}
   </>
   )}
-
 export default PodcastContainer;
