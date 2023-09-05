@@ -13,7 +13,7 @@ MongoClient.connect('mongodb://127.0.0.1:27017', { useUnifiedTopology: true})
     const db = client.db('podcast_db');
     const podcastsCollection = db.collection('podcasts');
     const podcastsRouter = createRouter(podcastsCollection);
-    app.use('api/podcasts', podcastsRouter);
+    app.use('/api/podcasts', podcastsRouter);
   })
     .catch(console.err);
 
