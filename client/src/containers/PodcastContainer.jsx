@@ -1,7 +1,8 @@
 import {useState, useEffect} from 'react'
 import Podcast from "../components/Podcast"
 import PodcastList from "../components/PodcastList"
-
+// import PodcastService from "../components/PodcastService"
+import {getPodcasts} from "../components/PodcastService"
 
 
 const PodcastContainer = () => {
@@ -16,14 +17,26 @@ const PodcastContainer = () => {
   //     });
   // }, []);
 
+  const fetchPodcasts = () => {
+    fetch("http://localhost:9000/api/podcasts")
+    .then((res) => res.json())
+    .then((data) => setPodcasts(data));
+
+  useEffect(() => {
+    fetchPodcasts()
+  }, [])
+
+
+
+
+
+  }
+
 
   return (
-    <>
-  <p>Podcasts App</p>
+  <>
+  <h2>{podcast.name}</h2>
   </>
-);
-};
+  )}
 
 export default PodcastContainer;
-
-
