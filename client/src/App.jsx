@@ -1,12 +1,12 @@
-import { useState } from 'react'
-
 import './App.css'
+import PodcastContainer from './containers/PodcastContainer'
 
 function App() {
 
   return (
     <>
-    <h1>Podcasts App</h1>
+    <h1>Podcats</h1>
+    <PodcastContainer/>
     </>
   )
 }
