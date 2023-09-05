@@ -56,6 +56,10 @@ db.podcasts.insertMany([
 		"genres": [
 			"PODCASTSERIES_COMEDY"
 		],
+    "itunesInfo": {
+      "uuid": "0d191451-4acc-42ae-86f8-39eb3f6b5234",
+      "baseArtworkUrlOf": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts116/v4/49/50/56/495056c7-ca2c-0e0d-2cde-990509b163aa/mza_4807061494952023336.jpg/640x640bb.png"
+    },
 		"episodes": [
       {
         "uuid": "68bc04dc-819c-4760-84b9-d199e98563c7",
