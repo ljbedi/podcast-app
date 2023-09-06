@@ -1,10 +1,11 @@
 import React from 'react';
+import removeHtml from '../utils/removeHtml';
 
-const Podcast = ({ podcast, subscribePodcast }) => {
+const Podcast = ({ podcast, subscribePodcast, onPodcastClick }) => {
   return (
     <div>
-      <h3>{podcast.name}</h3>
-      <p>{podcast.description}</p>
+      <h3 onClick={onPodcastClick}>{podcast.name}</h3>
+      <p>{removeHtml(podcast.description)}</p>
       <button onClick={() => subscribePodcast(podcast)}>Subscribe</button>
     </div>
   );
