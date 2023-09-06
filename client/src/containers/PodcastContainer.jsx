@@ -22,14 +22,6 @@ const PodcastContainer = () => {
       });
   };
 
-  // const fetchEpisodesForSelectedPodcast = () => {
-  //   // fetch(`http://localhost:9000/api/podcasts`)
-  //   //   .then((res) => res.json())
-  //   //   .then((data) => setEpisodes(data))
-  //   //   .catch((error) => {
-  //   //     console.error('Error fetching episodes:', error);
-  //   //   });
-  // };
 
   const subscribePodcast = (podcast) => {
     if (!subscribedPodcasts.some((p) => p._id === podcast._id)) {
@@ -43,7 +35,6 @@ const PodcastContainer = () => {
   };
 
   const handlePodcastClick = (podcastId) => {
-    fetchEpisodesForSelectedPodcast(podcastId);
 
   const selectedPodcastInfo = podcasts.find((podcast) => podcast._id === podcastId);
     setSelectedPodcast(selectedPodcastInfo);
