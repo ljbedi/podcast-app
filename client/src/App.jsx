@@ -1,4 +1,5 @@
 import './App.css'
+import SubscribedPodcast from './components/SubscribedPodcast'
 import PodcastContainer from './containers/PodcastContainer'
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
     <h1>Podcats</h1>
     <PodcastContainer/>
+
     </>
   )
 }
