@@ -1,10 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-const Podcast = () => {
+const Podcast = ({ podcast, subscribePodcast }) => {
   return (
-    <div>Podcast</div>
-  )
-}
+    <div>
+      <h3>{podcast.name}</h3>
+      <p>{podcast.description}</p>
+      <button onClick={() => subscribePodcast(podcast)}>Subscribe</button>
+    </div>
+  );
+};
 
-export default Podcast
-
+export default Podcast;
