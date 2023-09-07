@@ -5,6 +5,7 @@ import SubscribedPodcast from "../components/SubscribedPodcast";
 import User from "../components/User/User";
 // import SubscribedPodcast from "../components/SubscribedPodcast";
 
+
 const Home = () => {
     const [user,setUser]= useState (null)
     const [podcasts, setPodcasts] = useState([]);
@@ -40,7 +41,7 @@ useEffect (() => {
     return (
         <>
             <SubscribedPodcast user={user} setUser={setUser} podcasts={podcasts} />
-            <PodcastList podcasts ={podcasts} />
+            <PodcastList podcasts ={podcasts}/>
             <User/>
 
             {/* <SubscribedPodcast/> */}
