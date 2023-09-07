@@ -28,12 +28,31 @@ const createRouter = function (collection) {
                 res.json({ status: 500, error: err});
             }
         )
+
     });
     
-
-    return router
-
-
+    router.put("/:id", (req, res) => {
+        collection.findOneAndUpdate(
+            {_id: ObjectID(req.params.id)},
+            { $set: req.body}
+        ).then((doc)=> {
+            collection.findOne({_id: ObjectID(req.params.id)})
+        .then((doc)=> {
+            res.json(doc);
+        }).catch(
+            (err) => {
+                res.status(500);
+                res.json({ status: 500, error: err});
+            }
+        )
+            
+      }).catch(
+        (err) => {
+            res.status(500);
+            res.json({ status: 500, error: err});
+        }
+    )})
+      return router;
 
 }
 

@@ -3,12 +3,10 @@ db.dropDatabase();
 
 db.users.insertMany([
   {
-    "_id": {
-      "oid": "64f9b30f5ed392233702b341"
-    },
+    "_id": "64f9e83df031f764d901db2c",
     "name": "Bill",
     "subscribedPodcasts": [
-      "64f9a4fd9d5ffca9a0ed091b"
+  
     ]
   }
 ]);

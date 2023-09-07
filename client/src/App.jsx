@@ -14,7 +14,8 @@ function App() {
         <Route path="/">
           <Route index element={<Home/>} />
           <Route path="/:id" element={<Podcast/>} />
-          {/* NEED AN ID ROUTE FOR PodcastContainer */}
+          {/* <Route path="/user/:id" element = {<User/>}/> */}
+    
         </Route>
 
       </Routes>
