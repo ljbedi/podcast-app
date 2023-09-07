@@ -21,3 +21,13 @@ const EpisodeList = ({ podcast }) => {
 
 
 export default EpisodeList;
+
+
+
+const AudioPlayer = ({podcast}) => {
+  return
+    <div>
+      <h3>Audio Player</h3>
+        
+    </div>
+}

@@ -8,6 +8,9 @@ const PodcastContainer = () => {
   const [subscribedPodcasts, setSubscribedPodcasts] = useState([]);
   const [selectedPodcast, setSelectedPodcast] = useState(null);
   const [episodes, setEpisodes] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+
+  // PODCAST LIST???
 
   useEffect(() => {
     fetchPodcasts();
@@ -22,6 +25,7 @@ const PodcastContainer = () => {
       });
   };
 
+  // SUBSCRIBED PODCAST??
 
   const subscribePodcast = (podcast) => {
     if (!subscribedPodcasts.some((p) => p._id === podcast._id)) {
@@ -34,16 +38,33 @@ const PodcastContainer = () => {
     setSubscribedPodcasts(updatedSubscribedList);
   };
 
-  const handlePodcastClick = (podcastId) => {
+  // ABILITY TO CLICK ON BUTTON AND SUBSCRIBE - SUBSCRIBED PODCAST????
 
-  const selectedPodcastInfo = podcasts.find((podcast) => podcast._id === podcastId);
+  const handlePodcastClick = (podcastId) => {
+    const selectedPodcastInfo = podcasts.find((podcast) => podcast._id === podcastId);
     setSelectedPodcast(selectedPodcastInfo);
   };
 
+  // SEARCH PODCAST BY SEARCH BAR  - HOME???? 
+
+
+  const filteredPodcasts = podcasts.filter((podcast) =>
+    podcast.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <>
+      <div className="search-bar">
+        <input
+          type="text"
+          placeholder="Search for podcasts..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+        />
+      </div>
+
       <SubscribedPodcast subscribedPodcasts={subscribedPodcasts} unsubscribePodcast={unsubscribePodcast} />
-      
+
       {selectedPodcast && (
         <>
           <h2>Episodes for {selectedPodcast.name}</h2>
@@ -52,7 +73,7 @@ const PodcastContainer = () => {
       )}
 
       <h2>Podcasts</h2>
-      {podcasts.map((podcast) => (
+      {filteredPodcasts.map((podcast) => (
         <Podcast
           key={podcast._id}
           podcast={podcast}
