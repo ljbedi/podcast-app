@@ -1,6 +1,18 @@
 use podcast_db;
 db.dropDatabase();
 
+db.users.insertMany([
+  {
+    "_id": {
+      "oid": "64f9b30f5ed392233702b341"
+    },
+    "name": "Bill",
+    "subscribedPodcasts": [
+      "64f9a4fd9d5ffca9a0ed091b"
+    ]
+  }
+]);
+
 db.podcasts.insertMany([
   {
     "podcastid": "350ea4fc-1d1f-4ba3-84e7-4d8f91843862",

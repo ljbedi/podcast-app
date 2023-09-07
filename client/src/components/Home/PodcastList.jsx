@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PodcastCard from './PodcastCard';
+// import SubscribedPodcast from '../Buttons/SubscribeBtn';
 
 const PodcastList = () => {
   const [podcasts, setPodcasts] = useState([]);
@@ -23,6 +24,7 @@ const PodcastList = () => {
       {podcasts.map((podcast) => (
         <PodcastCard key={podcast._id} podcast={podcast} />
       ))}
+        {/* <SubscribedPodcast/> */}
     </>
   );
 };
