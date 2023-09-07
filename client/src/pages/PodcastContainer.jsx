@@ -1,26 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import Podcast from '../components/Podcast';
 import SubscribedPodcast from '../components/SubscribedPodcast';
-import EpisodeList from '../components/EpisodeList';
+import EpisodeList from '../components/Podcast/EpisodeList';
+
+// import PodcastList from '../components/Home/PodcastList';
+// import PodcastCard from '../components/Home/PodcastCard';
+
 
 const PodcastContainer = () => {
-  const [podcasts, setPodcasts] = useState([]);
+  
   const [subscribedPodcasts, setSubscribedPodcasts] = useState([]);
   const [selectedPodcast, setSelectedPodcast] = useState(null);
   const [episodes, setEpisodes] = useState([]);
 
-  useEffect(() => {
-    fetchPodcasts();
-  }, []);
 
-  const fetchPodcasts = () => {
-    fetch('http://localhost:9000/api/podcasts')
-      .then((res) => res.json())
-      .then((data) => setPodcasts(data))
-      .catch((error) => {
-        console.error('Error fetching podcasts:', error);
-      });
-  };
 
 
   const subscribePodcast = (podcast) => {
@@ -48,18 +41,13 @@ const PodcastContainer = () => {
         <>
           <h2>Episodes for {selectedPodcast.name}</h2>
           <EpisodeList podcast={selectedPodcast} />
+          <PodcastCard/>
+
+
         </>
       )}
 
-      <h2>Podcasts</h2>
-      {podcasts.map((podcast) => (
-        <Podcast
-          key={podcast._id}
-          podcast={podcast}
-          subscribePodcast={subscribePodcast}
-          onPodcastClick={() => handlePodcastClick(podcast._id)}
-        />
-      ))}
+    
     </>
   );
 };

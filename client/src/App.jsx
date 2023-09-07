@@ -1,16 +1,28 @@
 import './App.css'
-import SubscribedPodcast from './components/SubscribedPodcast'
-import PodcastContainer from './containers/PodcastContainer'
+
+import Podcast from './pages/Podcast';
+import Home from './pages/Home';
+// import SubscribedPodcast from './components/SubscribedPodcast';
+import PodcastContainer from './pages/PodcastContainer';
+import { Route, Routes, Link } from 'react-router-dom';
 
 function App() {
 
   return (
     <>
-    <h1>Podcats</h1>
-    <PodcastContainer/>
+      <Routes>
+        <Route path="/">
+          <Route index element={<Home/>} />
+          <Route path="/:id" element={<Podcast/>} />
+          {/* NEED AN ID ROUTE FOR PodcastContainer */}
+        </Route>
+
+      </Routes>
 
     </>
-  )
+  );
 }
+
+
 
 export default App

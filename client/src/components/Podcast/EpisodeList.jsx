@@ -1,5 +1,5 @@
 import React from 'react';
-import removeHtml from '../utils/removeHtml';
+import removeHtml from '../../utils/removeHtml';
 
 const EpisodeList = ({ podcast }) => {
   console.log(podcast.episodes)
@@ -10,7 +10,7 @@ const EpisodeList = ({ podcast }) => {
         {podcast.episodes.map((episode) => (
           <li key={episode.uuid}>
             <h4>{episode.name}</h4>
-            <audio controls><source src={episode.audioUrl} type="audio/mpeg"/></audio>
+            {/* <audio controls><source src={episode.audioUrl} type="audio/mpeg"/></audio> */}
             <div dangerouslySetInnerHTML={{__html: removeHtml(episode.description)}}/>
           </li>
         ))}
