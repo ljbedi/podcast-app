@@ -31,11 +31,12 @@ const createRouter = function (collection) {
 
     });
     
-    router.put("/:id", (req, res) => {
+    router.put("/:id", (req, res) => { console.log(req.body, req.params.id)
         collection.findOneAndUpdate(
             {_id: ObjectID(req.params.id)},
             { $set: req.body}
         ).then((doc)=> {
+            console.log(doc)
             collection.findOne({_id: ObjectID(req.params.id)})
         .then((doc)=> {
             res.json(doc);
