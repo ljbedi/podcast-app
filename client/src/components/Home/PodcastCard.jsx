@@ -6,6 +6,7 @@ import User from '../User/User';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
+
 // import SubscribeBtn from '../Buttons/SubscribeBtn';
   /*  styles for the podcastcard */
 const PodcastCardContainer = styled.div`
@@ -28,12 +29,14 @@ const PodcastImage = styled.img`
 const PodcastDetails = styled.div`
   margin-top: 8px;
 `;
+
 const PodcastCard = ({podcast, user, setUser}) => {
   const { name, itunesInfo, _id } = podcast;
   const isSubscribed = user.subscribedPodcasts.some(id => podcast._id == id)
     const togglePodcast = () => {
       const updatedPodcasts =
       {
+
           "subscribedPodcasts": !isSubscribed ? [...user.subscribedPodcasts, podcast._id ] : user.subscribedPodcasts.filter(id => podcast._id !=id )
       }
       const requestOptions = {
@@ -57,34 +60,16 @@ const PodcastCard = ({podcast, user, setUser}) => {
         <h3>{name}</h3>
         <h5>{podcast.description}</h5>
         {/* <h4>{isSubscribed ? 'Subscribed' : 'Not Subscribed'}</h4> */}
-        <button onClick={togglePodcast}>
+        <button onClick={togglePodcast}/>
           <FontAwesomeIcon icon={faHeart} color={isSubscribed ? 'red' : 'gray'} />
+
+        <h4>{isSubscribed}</h4>
+        <button onClick={togglePodcast} >
+          {isSubscribed ? 'Unsubscribe' : 'Subscribe'}
         </button>
       </PodcastDetails>
     </PodcastCardContainer>
   );
 };
-// const PodcastCard = ({ podcast, togglePodcast}) => {
-//   const { name, itunesInfo, _id } = podcast;
-//   const handleSubscribeClick = () =>{
-//     togglePodcast(podcast);
-//   };
-//   return (
-//     <div className="podcast-card">
-//       <Link to={_id} className="podcast-image-link">
-//         {itunesInfo && itunesInfo.baseArtworkUrlOf && (
-//           <img src={itunesInfo.baseArtworkUrlOf} alt={name} className="podcast-image" />
-//         )}
-//       </Link>
-//       <div className="podcast-details">
-//         <h3>{name}</h3>
-//         <h5>{podcast.description}</h5>
-//         <button onClick={handleSubscribeClick}>
-//           {podcast.subscribed ? 'Unsubscribe' : 'Subscribe'}
-//         </button>
-//       </div>
-//     </div>
-//   );
-// };
-//redirect to the individual podcast page by clicking the card
+
 export default PodcastCard;
