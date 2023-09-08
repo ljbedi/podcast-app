@@ -3,6 +3,8 @@ import PodcastCard from "../components/Home/PodcastCard";
 import PodcastList from "../components/Home/PodcastList";
 import SubscribedPodcast from "../components/SubscribedPodcast";
 import User from "../components/User/User";
+// import Search from "../components/Header/Search";
+
 // import SubscribedPodcast from "../components/SubscribedPodcast";
 
 
@@ -41,6 +43,7 @@ useEffect (() => {
 
     return (
         <>
+            {/* <Search/> */}
             <SubscribedPodcast user={user} setUser={setUser} podcasts={podcasts} />
             <PodcastList podcasts ={podcasts} user= {user} setUser = {setUser}/>
             

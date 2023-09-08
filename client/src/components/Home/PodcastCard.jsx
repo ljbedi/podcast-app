@@ -55,7 +55,7 @@ const PodcastCard = ({podcast, user, setUser}) => {
       </PodcastImageLink>
       <PodcastDetails>
         <h3>{name}</h3>
-        <h5>{podcast.description}</h5>
+        {/* <h5>{podcast.description}</h5> */}
         {/* <h4>{isSubscribed ? 'Subscribed' : 'Not Subscribed'}</h4> */}
         <button onClick={togglePodcast}>
           <FontAwesomeIcon icon={faHeart} color={isSubscribed ? 'red' : 'gray'} />

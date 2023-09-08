@@ -21,6 +21,7 @@ const EpisodeList = ({ podcast, user, setUser }) => {
   return (
     <div>
       <PodcastCard podcast={podcast} user={user} setUser={setUser}/>
+      <h4>Description: {podcast.description}</h4>
       <h3>Recent Episodes</h3>
       <ul>
         {podcast.episodes.map((episode) => (
