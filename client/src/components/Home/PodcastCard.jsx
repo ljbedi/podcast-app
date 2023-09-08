@@ -24,7 +24,7 @@ const PodcastImageLink = styled(Link)`
 const PodcastImage = styled.img`
   /* styles for the podcast image */
   max-width: 100;
-  max-height: 150px
+  max-height: 150px;
 `;
 
 const PodcastDetails = styled.div`
