@@ -5,16 +5,30 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import EpisodeList from '../components/Podcast/EpisodeList'
+import User from '../components/User/User'
 
 
 
 const Podcast = () => {
   const {id} = useParams()
     const [podcast, setPodcast] = useState(null);
+    const [user, setUser] = useState(null);
+
   
     useEffect(() => {
       fetchPodcast();
     }, []);
+
+    useEffect(() => {
+      fetchUser();
+    }, []);
+
+    const fetchUser = () => {
+      fetch (`http://localhost:9000/api/users`)
+      .then ((res)=> res.json ())
+      .then ((data) => setUser (data[0]))
+    }
   
     const fetchPodcast = () => {
       fetch(`http://localhost:9000/api/podcasts/${id}`)
@@ -25,11 +39,14 @@ const Podcast = () => {
           console.error('Error fetching podcast:', error);
         });
     };
-  if (!podcast) 
+  if (!podcast || !user)
     return ("Loading")
   
   return (
-    <div>{podcast.name}</div>
+    <>
+    <h1>{podcast.name}</h1>
+    <EpisodeList podcast={podcast} user={user} setUser={setUser}/>
+    </>
   )
 }
 

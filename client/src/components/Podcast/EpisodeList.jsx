@@ -1,23 +1,39 @@
 import React from 'react';
+import styled from 'styled-components';
 import removeHtml from '../../utils/removeHtml';
+import PodcastCard from '../Home/PodcastCard';
 
-const EpisodeList = ({ podcast }) => {
-  console.log(podcast.episodes)
+const EpisodeList = ({ podcast, user, setUser }) => {
+  const StyledAudioPlayer = styled.audio`
+    width: 300px;
+    height: 30px;
+    background-color: #616e8e;
+    border: 3px;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 20px;
+  `;
+
+  if (!podcast || !podcast.episodes) {
+    return <div>No episodes available</div>;
+  }
+
   return (
     <div>
-      <h3>Episode List</h3>
+      <PodcastCard podcast={podcast} user={user} setUser={setUser}/>
+      <h3>Recent Episodes</h3>
       <ul>
         {podcast.episodes.map((episode) => (
           <li key={episode.uuid}>
-            <h4>{episode.name}</h4>
-            {/* <audio controls><source src={episode.audioUrl} type="audio/mpeg"/></audio> */}
-            <div dangerouslySetInnerHTML={{__html: removeHtml(episode.description)}}/>
+            <div dangerouslySetInnerHTML={{ __html: removeHtml(episode.description) }} />
+            <StyledAudioPlayer controls>
+              <source src={episode.audioUrl} type="audio/mpeg" />
+            </StyledAudioPlayer>
           </li>
         ))}
       </ul>
     </div>
   );
 };
-
 
 export default EpisodeList;
