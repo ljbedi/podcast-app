@@ -9,6 +9,7 @@ import User from "../components/User/User";
 const Home = () => {
     const [user,setUser]= useState (null)
     const [podcasts, setPodcasts] = useState([]);
+    
 
     useEffect(() => {
       fetchPodcasts();
@@ -41,7 +42,7 @@ useEffect (() => {
     return (
         <>
             <SubscribedPodcast user={user} setUser={setUser} podcasts={podcasts} />
-            <PodcastList podcasts ={podcasts}/>
+            <PodcastList podcasts ={podcasts} user= {user} setUser = {setUser}/>
             <User/>
 
             {/* <SubscribedPodcast/> */}

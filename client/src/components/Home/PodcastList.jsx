@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PodcastCard from './PodcastCard';
 // import SubscribedPodcast from '../Buttons/SubscribeBtn';
 
-const PodcastList = ({podcasts, togglePodcast}) => {
+const PodcastList = ({podcasts,user, setUser}) => {
  
 
   return (
@@ -11,7 +11,8 @@ const PodcastList = ({podcasts, togglePodcast}) => {
       {podcasts.map((podcast) => (
         <PodcastCard key={podcast._id} 
         podcast={podcast} 
-        togglePodcast={togglePodcast}
+        user = {user} 
+        setUser ={setUser}
         />
       ))}
         {/* <SubscribedPodcast/> */}
