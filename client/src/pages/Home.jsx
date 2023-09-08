@@ -9,6 +9,7 @@ import Search from "../components/Header/Search";
 
 
 const Home = () => {
+
   const [user, setUser] = useState(null)
   const [podcasts, setPodcasts] = useState([]);
 
@@ -46,11 +47,12 @@ const Home = () => {
       <SubscribedPodcast user={user} setUser={setUser} podcasts={podcasts} />
       <PodcastList podcasts={podcasts} />
       <User />
-
-      {/* <SubscribedPodcast/> */}
-
-    </>
+           </>
   )
 }
 
 export default Home;
+
+
+
+ 
