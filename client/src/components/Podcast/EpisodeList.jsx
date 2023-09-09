@@ -29,21 +29,37 @@ const EpisodeBlock = styled.ul`
     color: rgb(60,64,67);
     margin-top: 4px;
     white-space: pre-line;
-    justify-content: center;
+
     margin-left: auto;
     margin-right: auto;
 `
 const EpisodeDesc = styled.div`
-  white-space: wrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 500px;
-  max-height: 100px;
+    font-family: Roboto,Arial,sans-serif;
+    line-height: 1.25rem;
+    font-size: .875rem;
+    letter-spacing: .0142857143em;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    max-height: 40px;
+    color: rgb(60,64,67);
+    margin-top: 4px;
+    white-space: pre-line;
 `
 const Recent = styled.h3`
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 `
+const LineBreak = styled.hr`
+  background-color: #01c3dc;
+  height: 1px;
+`
+
+
 
   if (!podcast || !podcast.episodes) {
     return <div>No episodes available</div>;
@@ -52,6 +68,7 @@ const Recent = styled.h3`
   return (
     <div>
       <PodcastCard podcast={podcast} user={user} setUser={setUser}/>
+      <p>
       <Recent>Recent Episodes</Recent>
       <EpisodeBlock>
         {podcast.episodes.map((episode) => (
@@ -61,10 +78,11 @@ const Recent = styled.h3`
             <StyledAudioPlayer controls>
               <source src={episode.audioUrl} type="audio/mpeg" />
             </StyledAudioPlayer>
-            <hr />
+            <LineBreak />
           </li>
         ))}
       </EpisodeBlock>
+      </p>
     </div>
   );
 };
