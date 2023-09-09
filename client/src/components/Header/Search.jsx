@@ -1,42 +1,68 @@
-import { useState, useEffect } from "react";
-import PodcastList from "../Home/PodcastList";
+import { useState } from "react";
 import styled from 'styled-components';
 
 const SearchBar = styled.input`
-  width: 300px;
+  width: 400px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
 `;
+const DropdownContainer = styled.div`
+  position: relative;
+`;
 
-const Search = ({user, setUser}) => {
-  const [podcastDetails, setPodcastDetails] = useState([]);
+const DropdownList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  width: 420px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+`;
+
+const DropdownItem = styled.li`
+  padding: 8px 16px;
+  width: 388px;
+  border-radius: 5px;
+
+  a {
+    text-decoration: none;
+    color: #333;
+
+  }
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+`;
+
+
+const Search = ({ user, setUser, podcasts }) => {
   const [filteredPodcast, setFilteredPodcast] = useState([]);
+  const [showDropdown, setShowDropdown] = useState(false);
 
-  useEffect(() => {
-    fetch('http://localhost:9000/api/podcasts/')
-      .then((res) => res.json())
-      .then((data) => {
-        setPodcastDetails(data);
-        setFilteredPodcast(data);
-      });
-  }, []);
-  
   const handleSearch = (event) => {
     const searchValue = event.target.value.toLowerCase();
-    const filteredPodcast = podcastDetails.filter((podcast) => {
+    const filteredPodcast = podcasts.filter((podcast) => {
       return (
         findMatches(podcast, "name", searchValue) ||
         findMatches(podcast, "description", searchValue)
       );
     });
     setFilteredPodcast(filteredPodcast);
-  };
-  const findMatches = (podcast, key, value) => {
-    return podcast[key].toLowerCase().includes(value.toLowerCase())
-  }
 
+    setShowDropdown(filteredPodcast.length > 0 && searchValue.trim() !== "");
+  };
+
+  const findMatches = (podcast, key, value) => {
+    return podcast[key].toLowerCase().includes(value.toLowerCase());
+  };
 
   return (
     <div>
@@ -45,8 +71,17 @@ const Search = ({user, setUser}) => {
         placeholder="Search By Podcast Name"
         onChange={handleSearch}
       />
-      {filteredPodcast && <PodcastList podcasts={filteredPodcast} user= {user} setUser = {setUser}/>}
+<DropdownContainer>
+      {showDropdown && (
+          <DropdownList>
+            {filteredPodcast.map((podcast) => (
+              <DropdownItem key={podcast.id}><a href={podcast._id}>{podcast.name}</a></DropdownItem>
+            ))}
+          </DropdownList>
+      )}
+      </DropdownContainer>
     </div>
-  )
-}
+  );
+};
+
 export default Search;
