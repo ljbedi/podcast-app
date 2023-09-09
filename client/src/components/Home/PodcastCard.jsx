@@ -60,12 +60,12 @@ const PodcastCard = ({podcast, user, setUser}) => {
         <h3>{name}</h3>
         <h5>{podcast.description}</h5>
         {/* <h4>{isSubscribed ? 'Subscribed' : 'Not Subscribed'}</h4> */}
-        <button onClick={togglePodcast}/>
-          <FontAwesomeIcon icon={faHeart} color={isSubscribed ? 'red' : 'gray'} />
+          
 
         <h4>{isSubscribed}</h4>
         <button onClick={togglePodcast} >
           {isSubscribed ? 'Unsubscribe' : 'Subscribe'}
+          <FontAwesomeIcon icon={faHeart} color={isSubscribed ? 'red' : 'gray'} />
         </button>
       </PodcastDetails>
     </PodcastCardContainer>
