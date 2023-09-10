@@ -2,20 +2,16 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const NavbarWrapper = styled.nav`
-  overflow: hidden;
-  background-color: #333;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%;
-  position: fixed;
-  /* top: 0; 
+  top: 0; 
   left: 0;
   right: 0;
   background-color: #333;
-  color: #fff;
-  
+  /* position: fixed; */
+  border-radius: 5px;
+  color: #333;
+  padding: 1rem 0;
   z-index: 1000;
-  transition: background-color 0.3s ease; */
+  transition: background-color 0.3s ease; 
 `;
 
 const NavbarContainer = styled.div`
@@ -40,12 +36,31 @@ const NavbarMenu = styled.div`
 `;
 
 const NavbarLink = styled.a`
-  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #ffffff;
   text-decoration: none;
   margin-right: 1rem;
   font-size: 1rem;
+  position: relative;
+
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #fdc300;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background-color: #fdc300;
+      transform-origin: center;
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
   }
 `;
 
@@ -59,7 +74,8 @@ function NavBar() {
   return (
     <NavbarWrapper>
       <NavbarContainer>
-        <NavbarLogo  src="/Podcats-logo.png" alt="Logo" />
+        
+      <a href="/"><NavbarLogo  src="/Podcats-logo.png" alt="Logo" /></a>
         <NavbarMenu isOpen={isOpen}>
           <NavbarLink href="/">Home</NavbarLink>
           <NavbarLink href="/">Subscriptions</NavbarLink>
@@ -71,3 +87,5 @@ function NavBar() {
 }
 
 export default NavBar;
+
+<NavbarLogo  src="/Podcats-logo.png" alt="Logo" />

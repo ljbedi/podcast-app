@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import PodcastList from "../components/Home/PodcastList";
 import SubscribedPodcast from "../components/SubscribedPodcast";
 import Search from "../components/Header/Search";
-import NavBar from "../components/Header/Nav";
 
 const Home = () => {
   const [user, setUser] = useState(null);
@@ -35,7 +34,6 @@ const Home = () => {
 
   return (
     <>
-      <NavBar />
       <Search user={user} setUser={setUser} podcasts={podcasts} />
       <SubscribedPodcast user={user} setUser={setUser} podcasts={podcasts} />
       <PodcastList podcasts={podcasts} user={user} setUser={setUser} />
