@@ -6,11 +6,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const PodcastCardContainer = styled.div`
-  background-color: #fff;
+  background-color: #333;
   border: 1px solid #ddd;
   border-radius: 12px; 
   padding: 16px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Increased box shadow */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); 
   position: relative; 
 `;
 
@@ -27,6 +27,10 @@ const PodcastImage = styled.img`
 
 const PodcastDetails = styled.div`
   margin-top: 8px;
+  h4 {
+    font-size: 15px;
+    color: #FF47F9; 
+  }
 `;
 
 const HeartIcon = styled(FontAwesomeIcon)`
@@ -34,7 +38,7 @@ const HeartIcon = styled(FontAwesomeIcon)`
   bottom: 10px;
   right: 10px;
   font-size: 24px;
-  color: ${(props) => (props.isSubscribed ? 'red' : 'gray')};
+  color: ${(props) => (props.isSubscribed ? '#F4C524' : 'gray')};
   cursor: pointer;
 `;
 
@@ -71,7 +75,7 @@ const PodcastCard = ({ podcast, user, setUser }) => {
         )}
       </PodcastImageLink>
       <PodcastDetails>
-        <h3>{name}</h3>
+        <h4 className='podcast_title'>{name}</h4>
       </PodcastDetails>
       <HeartIcon
         icon={faHeart}
