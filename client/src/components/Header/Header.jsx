@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const HeaderWrapper = styled.header`
   background-color: #ffffff;
-  color: white;
+  background-color: #00c7e0;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -18,6 +18,7 @@ const Logo = styled.img`
 const Title = styled.h1`
   font-size: 1.5rem;
   margin: 0;
+  padding: 0;
 `;
 
 function Header() {

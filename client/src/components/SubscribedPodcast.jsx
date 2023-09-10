@@ -8,14 +8,19 @@ const SubscribedPodcastContainer = styled.div`
   font-family: 'Avenir Next', sans-serif;
   font-size: 24px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 1rem;
 `;
+
+const SubbedPods = styled.ul`
+  display: flex;
+`
 
 const SubscribedPodcast = ({ podcasts, user, setUser }) => {
   return (
     <div>
       <SubscribedPodcastContainer>What You're Vibing Now</SubscribedPodcastContainer>
       
-      <ul>
+      <SubbedPods>
         {podcasts
           .filter((podcast) => user.subscribedPodcasts.some((id) => podcast._id === id))
           .map((podcast) => (
@@ -26,7 +31,7 @@ const SubscribedPodcast = ({ podcasts, user, setUser }) => {
               setUser={setUser}
             />
           ))}
-      </ul>
+      </SubbedPods>
       {user.subscribedPodcasts.length === 0 && <p></p>}
     </div>
   );
