@@ -9,7 +9,7 @@ const PodcastListContainer = styled.div`
   flex-wrap: wrap; 
   gap: 16px;
   padding: 16px;
-  overflow: scroll; 
+  /* overflow: scroll;  */
   justify-content: center
 `;
 
