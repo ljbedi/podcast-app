@@ -30,6 +30,14 @@ const CarouselButton = styled.button`
   
 `;
 
+const CenteredHeading = styled.h3`
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Avenir Next', sans-serif; 
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+`;
+
 const PodcastList = ({ podcasts, user, setUser }) => {
   const [batchIndex, setBatchIndex] = useState(0); 
   const cardsPerBatch = 4;
@@ -52,7 +60,7 @@ const PodcastList = ({ podcasts, user, setUser }) => {
 
   return (
     <>
-      <h3>Check out these trending Podcasts!</h3>
+      <CenteredHeading>Check out these trending Podcasts!</CenteredHeading>
       <PodcastListContainer>
         <CarouselButton onClick={scrollLeft}>
           <FontAwesomeIcon icon={faArrowLeft} />
@@ -69,5 +77,7 @@ const PodcastList = ({ podcasts, user, setUser }) => {
     </>
   );
 };
+
+
 
 export default PodcastList;
