@@ -7,6 +7,11 @@ const SearchBar = styled.input`
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  background-color: #F4C524;
+  color: white;
+  ::placeholder {
+    color: white !important;
+  }
 `;
 const DropdownContainer = styled.div`
   position: relative;
@@ -20,10 +25,12 @@ const DropdownList = styled.ul`
   top: 100%; 
   left: 0;
   width: 420px;
-  background-color: #fff;
+  background-color: #F4C524;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
+  z-index: 2;
 `;
 
 const DropdownItem = styled.li`
@@ -33,7 +40,7 @@ const DropdownItem = styled.li`
 
   a {
     text-decoration: none;
-    color: #333;
+    color: white;
 
   }
 

@@ -29,7 +29,7 @@ const PodcastDetails = styled.div`
   margin-top: 8px;
   h4 {
     font-size: 15px;
-    color: #FF47F9; 
+    color: white; 
   }
 `;
 
