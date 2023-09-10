@@ -1,53 +1,70 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import PodcastCard from './PodcastCard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const PodcastListContainer = styled.div`
   display: flex;
+  flex-wrap: wrap; 
   gap: 16px;
   padding: 16px;
-  transition: transform 0.3s ease;
+  overflow: scroll; 
+`;
+
+const PodcastCardWrapper = styled.div`
+  flex: 0 0 calc(20% - 16px);
 `;
 
 const CarouselButton = styled.button`
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 8px 16px;
+  background-color: #F4C524;
+  color: #01C3DC;
+  border: 1px solid #ddd;
+  padding: 16px;
   cursor: pointer;
   font-size: 18px;
   margin-right: 16px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  position: relative; 
 `;
 
 const PodcastList = ({ podcasts, user, setUser }) => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const cardWidth = 300; 
-  const cardsPerBatch = 3; 
+  const [batchIndex, setBatchIndex] = useState(0); 
+  const cardsPerBatch = 4;
+
+  const startIndex = batchIndex * cardsPerBatch;
+  const endIndex = startIndex + cardsPerBatch;
+  const batchPodcasts = podcasts.slice(startIndex, endIndex);
 
   const scrollLeft = () => {
-    const newPosition = scrollPosition - cardWidth * cardsPerBatch;
-    setScrollPosition(Math.max(newPosition, 0));
+    if (batchIndex > 0) {
+      setBatchIndex(batchIndex - 1);
+    }
   };
 
   const scrollRight = () => {
-    const maxScroll = (Math.ceil(podcasts.length / cardsPerBatch) - 1) * cardWidth * cardsPerBatch;
-    const newPosition = scrollPosition + cardWidth * cardsPerBatch;
-    setScrollPosition(Math.min(newPosition, maxScroll));
+    if (endIndex < podcasts.length) {
+      setBatchIndex(batchIndex + 1);
+    }
   };
 
   return (
     <>
-    <p> <h3> Check out these trending Podcasts!</h3> </p>
-      <PodcastListContainer style={{ transform: `translateX(-${scrollPosition}px)` }}>
-        {podcasts.map((podcast) => (
-          <PodcastCard key={podcast._id} podcast={podcast} user={user} setUser={setUser} />
+      <h3>Check out these trending Podcasts!</h3>
+      <PodcastListContainer>
+        <CarouselButton onClick={scrollLeft}>
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </CarouselButton>
+        {batchPodcasts.map((podcast) => (
+          <PodcastCardWrapper key={podcast._id}>
+            <PodcastCard podcast={podcast} user={user} setUser={setUser} />
+          </PodcastCardWrapper>
         ))}
+        <CarouselButton onClick={scrollRight}>
+          <FontAwesomeIcon icon={faArrowRight} />
+        </CarouselButton>
       </PodcastListContainer>
-
-      <div>
-        <CarouselButton onClick={scrollLeft}>Previous</CarouselButton>
-        <CarouselButton onClick={scrollRight}>Next</CarouselButton>
-      </div>
     </>
   );
 };
