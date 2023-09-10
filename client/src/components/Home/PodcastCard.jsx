@@ -21,6 +21,7 @@ const PodcastImageLink = styled(Link)`
   text-decoration: none;
   color: #333;
   display: block;
+  background-color: #333;
 `;
 
 const PodcastImage = styled.img`
@@ -33,6 +34,7 @@ const PodcastDetails = styled.div`
   h4 {
     font-size: 15px;
     color: white; 
+    background-color: #333;
   }
 `;
 
@@ -41,6 +43,7 @@ const HeartIcon = styled(FontAwesomeIcon)`
   bottom: 10px;
   right: 10px;
   font-size: 24px;
+  background-color: #333;
   color: ${(props) => (props.isSubscribed ? '#F4C524' : 'gray')};
   cursor: pointer;
 `;
@@ -77,8 +80,8 @@ const PodcastCard = ({ podcast, user, setUser }) => {
           <PodcastImage src={itunesInfo.baseArtworkUrlOf} alt={name} />
         )}
       </PodcastImageLink>
-      <PodcastDetails>
-        <h4 className='podcast_title'>{name}</h4>
+      <PodcastDetails >
+        <h4>{name}</h4>
       </PodcastDetails>
       <HeartIcon
         icon={faHeart}

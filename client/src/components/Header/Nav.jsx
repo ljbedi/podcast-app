@@ -6,12 +6,16 @@ const NavbarWrapper = styled.nav`
   left: 0;
   right: 0;
   background-color: #333;
-  /* position: fixed; */
+  position: fixed;
   border-radius: 5px;
   color: #333;
   padding: 1rem 0;
   z-index: 1000;
   transition: background-color 0.3s ease; 
+  position: sticky;
+  top: 0;
+  width: 100%;
+
 `;
 
 const NavbarContainer = styled.div`
@@ -21,19 +25,27 @@ const NavbarContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  background-color: #333;
+  width: 100%;
 `;
 
 const NavbarLogo = styled.img`
-  color: #fff;
+  color: #333;;
   font-weight: bold;
   width: 100px;
   height: 100px;
+  background-color: #333;
 `;
 
 const NavbarMenu = styled.div`
   display: flex;
   align-items: center;
+  background-color: #333;
 `;
+
+const LogoLink = styled.a`
+  background-color: #333;
+`
 
 const NavbarLink = styled.a`
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -42,6 +54,7 @@ const NavbarLink = styled.a`
   margin-right: 1rem;
   font-size: 1rem;
   position: relative;
+  background-color: #333;
 
   &:hover {
     text-decoration: none;
@@ -64,6 +77,7 @@ const NavbarLink = styled.a`
   }
 `;
 
+
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -75,7 +89,7 @@ function NavBar() {
     <NavbarWrapper>
       <NavbarContainer>
         
-      <a href="/"><NavbarLogo  src="/Podcats-logo.png" alt="Logo" /></a>
+      <LogoLink href="/"><NavbarLogo  src="/Podcats-logo.png" alt="Logo" /></LogoLink>
         <NavbarMenu isOpen={isOpen}>
           <NavbarLink href="/">Home</NavbarLink>
           <NavbarLink href="/">Subscriptions</NavbarLink>

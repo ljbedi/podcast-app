@@ -18,7 +18,7 @@ const PodcastCardWrapper = styled.div`
 `;
 
 const CarouselButton = styled.button`
-  background-color: #F4C524;
+  background-color: #FDC300;
   color: #ff2bff;
   border: 1px solid #ddd;
   padding: 16px;
@@ -27,7 +27,6 @@ const CarouselButton = styled.button`
   border-radius: 12px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
   position: relative; 
-  
 `;
 
 const CenteredHeading = styled.h3`
@@ -35,7 +34,7 @@ const CenteredHeading = styled.h3`
   font-weight: bold;
   font-family: 'Avenir Next', sans-serif; 
   font-size: 24px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 `;
 
 const PodcastList = ({ podcasts, user, setUser }) => {
