@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import EpisodeList from '../components/Podcast/EpisodeList'
 import User from '../components/User/User'
+import NavBar from '../components/Header/Nav'
 
 
 
@@ -44,8 +45,9 @@ const Podcast = () => {
   
   return (
     <>
-    <h1>{podcast.name}</h1>
-    <EpisodeList podcast={podcast} user={user} setUser={setUser}/>
+      <NavBar/>
+      <h1>{podcast.name}</h1>
+      <EpisodeList podcast={podcast} user={user} setUser={setUser}/>
     </>
   )
 }
