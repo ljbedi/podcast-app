@@ -5,8 +5,7 @@ const SubscribedPodcast = ({podcasts, user, setUser}) => {
 
 
 
-console.log(podcasts)
-console.log(user.subscribedPodcasts)
+
   return (
 
     <div>
