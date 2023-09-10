@@ -9,24 +9,25 @@ const PodcastListContainer = styled.div`
   flex-wrap: wrap; 
   gap: 16px;
   padding: 16px;
-  overflow: scroll; 
+  /* overflow: scroll;  */
+  justify-content: center
 `;
 
 const PodcastCardWrapper = styled.div`
-  flex: 0 0 calc(20% - 16px);
+  /* flex: 0 0 calc(20% - 16px); */
 `;
 
 const CarouselButton = styled.button`
   background-color: #F4C524;
-  color: #01C3DC;
+  color: #ff2bff;
   border: 1px solid #ddd;
   padding: 16px;
   cursor: pointer;
   font-size: 18px;
-  margin-right: 16px;
   border-radius: 12px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
   position: relative; 
+  
 `;
 
 const PodcastList = ({ podcasts, user, setUser }) => {

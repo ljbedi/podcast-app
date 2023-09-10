@@ -12,6 +12,9 @@ const PodcastCardContainer = styled.div`
   padding: 16px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); 
   position: relative; 
+  height: 250px;
+  width: 150px;
+  margin: auto;
 `;
 
 const PodcastImageLink = styled(Link)`
