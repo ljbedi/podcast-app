@@ -12,6 +12,7 @@ const EpisodeList = ({ podcast, user, setUser }) => {
     padding: 5px;
     margin: 20px;
     border-radius: 20px;
+    
   `;
 
 const EpisodeBlock = styled.ul`
