@@ -10,9 +10,11 @@ const EpisodeList = ({ podcast, user, setUser }) => {
     background-color: #616e8e;
     border: 3px;
     padding: 5px;
-    margin: 20px;
+    margin: 10px;
     border-radius: 20px;
-    
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
   `;
 
 const EpisodeBlock = styled.ul`
@@ -30,9 +32,15 @@ const EpisodeBlock = styled.ul`
     color: rgb(60,64,67);
     margin-top: 4px;
     white-space: pre-line;
-    /* background-color: ; */
+
+    background-color: #333;
     margin-left: auto;
     margin-right: auto;
+    border-radius:  5px;
+    color: #fdc300;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); 
 `
 const EpisodeDesc = styled.div`
     font-family: Roboto,Arial,sans-serif;
@@ -49,15 +57,22 @@ const EpisodeDesc = styled.div`
     color: rgb(60,64,67);
     margin-top: 4px;
     white-space: pre-line;
+    color: white;
+    /* margin: 5px; */
+    align-items: left;
 `
 const Recent = styled.h3`
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  margin: 1rem;
 `
 const LineBreak = styled.hr`
-  background-color: #01c3dc;
+  background-color: #ff2bff;
   height: 1px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 1rem;
 `
 
 
