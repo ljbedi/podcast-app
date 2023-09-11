@@ -10,7 +10,7 @@ const PodcastListContainer = styled.div`
   gap: 16px;
   padding: 16px;
   /* overflow: scroll;  */
-  justify-content: center
+  justify-content: center;
 `;
 
 const PodcastCardWrapper = styled.div`
@@ -68,7 +68,7 @@ const PodcastList = ({ podcasts, user, setUser }) => {
         </CarouselButton>
         {batchPodcasts.map((podcast) => (
           <PodcastCardWrapper key={podcast._id}>
-            <PodcastCard podcast={podcast} user={user} setUser={setUser} />
+            <PodcastCard podcast={podcast} user={user} setUser={setUser} isHomePage={true}/>
           </PodcastCardWrapper>
         ))}
         <CarouselButton onClick={scrollRight}>

@@ -32,6 +32,7 @@ const EpisodeBlock = styled.ul`
     color: rgb(60,64,67);
     margin-top: 4px;
     white-space: pre-line;
+
     background-color: #333;
     margin-left: auto;
     margin-right: auto;
@@ -82,7 +83,7 @@ const LineBreak = styled.hr`
 
   return (
     <div>
-      <PodcastCard podcast={podcast} user={user} setUser={setUser}/>
+      <PodcastCard podcast={podcast} user={user} setUser={setUser} isHomePage={false}/>
       <p>
       <Recent>Recent Episodes</Recent>
       <EpisodeBlock>
