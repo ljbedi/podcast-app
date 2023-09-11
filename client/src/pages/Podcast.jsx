@@ -5,6 +5,7 @@ import EpisodeList from '../components/Podcast/EpisodeList';
 import User from '../components/User/User';
 import styled from 'styled-components'; 
 import PodcastCard from '../Components/Home/PodcastCard';
+// import NavBarTwo from '././components/Header/Nav2';
 
 const PodcastName = styled.h1`
   text-align: center;
@@ -28,11 +29,16 @@ const PodcastDesc = styled.div`
   font-family: 'Avenir Next', sans-serif;
   font-size: 24px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin: 1rem;
+  margin: 2rem;
   max-width: 500px;
-  padding: 5px;
   margin-left: auto;
   margin-right: auto;
+  font-size: 20px;
+  padding: 8px;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 `
 const PodcastInfo = styled.span`
 color: white;
@@ -82,6 +88,9 @@ const Podcast = () => {
 
   return (
     <>
+    <div>
+      {/* <NavBarTwo /> */}
+    </div>
     <PodcastInfo>
       <PodcastCard podcast={podcast} user={user} setUser={setUser} isHomePage={false}/>
       {/* <PodcastName>{podcast.name}</PodcastName> */}

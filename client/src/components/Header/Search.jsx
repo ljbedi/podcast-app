@@ -9,6 +9,7 @@ const SearchBar = styled.input`
   font-size: 16px;
   background-color: #FDC300;
   color: #333;
+  border: 1px solid white;
   margin: 1rem 1rem;
   ::placeholder {
     color: white !important;
