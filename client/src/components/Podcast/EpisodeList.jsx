@@ -89,7 +89,7 @@ const LineBreak = styled.hr`
 
   return (
     <div>
-      <PodcastCard podcast={podcast} user={user} setUser={setUser} isHomePage={false}/>
+      {/* <PodcastCard podcast={podcast} user={user} setUser={setUser} isHomePage={false}/> */}
       <p>
       <Recent>Recent Episodes</Recent>
       <EpisodeBlock>
