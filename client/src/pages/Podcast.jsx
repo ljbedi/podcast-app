@@ -9,8 +9,29 @@ const PodcastName = styled.h1`
   text-align: center;
   font-size: 24px; 
   font-weight: bold; 
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Avenir Next', sans-serif;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 1rem;
   /* font-family: */
 `;
+
+const PodcastDesc = styled.div`
+  text-align: center;
+  font-size: 24px; 
+  /* font-weight: bold;  */
+  text-align: center;
+  /* font-weight: bold; */
+  font-family: 'Avenir Next', sans-serif;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 1rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+`
 
 const Podcast = () => {
   const { id } = useParams();
@@ -42,6 +63,7 @@ const Podcast = () => {
   return (
     <>
       <PodcastName>{podcast.name}</PodcastName>
+      <PodcastDesc>{podcast.description}</PodcastDesc>
       <EpisodeList podcast={podcast} user={user} setUser={setUser} />
     </>
   );
