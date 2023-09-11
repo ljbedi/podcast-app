@@ -48,7 +48,7 @@ const HeartIcon = styled(FontAwesomeIcon)`
   cursor: pointer;
 `;
 
-const PodcastCard = ({ podcast, user, setUser }) => {
+const PodcastCard = ({ podcast, user, setUser, isHomePage }) => {
   const { name, itunesInfo, _id } = podcast;
   const isSubscribed = user.subscribedPodcasts.some((id) => podcast._id === id);
 
@@ -75,11 +75,19 @@ const PodcastCard = ({ podcast, user, setUser }) => {
 
   return (
     <PodcastCardContainer>
-      <PodcastImageLink to={_id}>
-        {itunesInfo && itunesInfo.baseArtworkUrlOf && (
-          <PodcastImage src={itunesInfo.baseArtworkUrlOf} alt={name} />
-        )}
-      </PodcastImageLink>
+      {isHomePage ? (
+        <PodcastImageLink to={_id}>
+          {itunesInfo && itunesInfo.baseArtworkUrlOf && (
+            <PodcastImage src={itunesInfo.baseArtworkUrlOf} alt={name} />
+          )}
+        </PodcastImageLink>
+      ) : (
+        <div>
+          {itunesInfo && itunesInfo.baseArtworkUrlOf && (
+            <PodcastImage src={itunesInfo.baseArtworkUrlOf} alt={name} />
+          )}
+        </div>
+      )}
       <PodcastDetails >
         <h4>{name}</h4>
       </PodcastDetails>
@@ -88,7 +96,7 @@ const PodcastCard = ({ podcast, user, setUser }) => {
         isSubscribed={isSubscribed}
         onClick={togglePodcast}
       />
-    </PodcastCardContainer>
+    </PodcastCardContainer >
   );
 };
 

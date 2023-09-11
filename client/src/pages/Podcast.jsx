@@ -9,7 +9,7 @@ const PodcastName = styled.h1`
   text-align: center;
   font-size: 24px; 
   font-weight: bold; 
-  font-family:
+  /* font-family: */
 `;
 
 const Podcast = () => {
