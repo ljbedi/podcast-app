@@ -15,6 +15,7 @@ const PodcastName = styled.h1`
   font-size: 24px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin: 1rem;
+  /* font-family: */
 `;
 
 const PodcastDesc = styled.div`
