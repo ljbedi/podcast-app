@@ -8,11 +8,17 @@ const SubscribedPodcastContainer = styled.div`
   font-family: 'Avenir Next', sans-serif;
   font-size: 24px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin: 1rem;
+
 `;
 
 const SubbedPods = styled.ul`
   display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: fit-content;
+  gap: 1rem;
+  padding: 1rem;
 `
 
 const SubscribedPodcast = ({ podcasts, user, setUser }) => {
