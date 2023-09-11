@@ -35,11 +35,12 @@ const EpisodeBlock = styled.ul`
     background-color: #333;
     margin-left: auto;
     margin-right: auto;
-    border-radius:  5px;
+    border-radius:  12px;
     color: #fdc300;
     padding: 1rem;
     border: 1px solid #ddd;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); 
+    
 `
 const EpisodeDesc = styled.div`
     font-family: Roboto,Arial,sans-serif;
@@ -65,6 +66,11 @@ const Recent = styled.h3`
   margin-right: auto;
   text-align: center;
   margin: 1rem;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Avenir Next', sans-serif;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 `
 const LineBreak = styled.hr`
   background-color: #ff2bff;
