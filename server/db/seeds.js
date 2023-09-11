@@ -14,7 +14,7 @@ db.podcasts.insertMany([
   {
     "podcastid": "350ea4fc-1d1f-4ba3-84e7-4d8f91843862",
     "name": "The Blindboy Podcast",
-    "description": "Hosted by Blindboy, of the Rubberbandits. An eclectic podcast containing short fiction, interviews and comedy.<br /><hr><p style='color:grey; font-size:0.75em;'> Hosted on Acast. See <a style='color:grey;' target='_blank' rel='noopener noreferrer' href='https://acast.com/privacy'>acast.com/privacy</a> for more information.</p>",
+    "description": "Hosted by Blindboy, of the Rubberbandits. An eclectic podcast containing short fiction, interviews and comedy.",
     "genres": [
       "PODCASTSERIES_COMEDY",
       "PODCASTSERIES_ARTS",
@@ -29,19 +29,19 @@ db.podcasts.insertMany([
       {
         "uuid": "037abf42-03e4-4bb8-8466-93a84dbb22b7",
         "name": "The Psychological impact of Poverty with Dr.Katriona O Sullivan",
-        "description": "Dr. Katriona O Sullivan is a psychologist whose work centers around the impact of poverty on a person's development. She works towards improving access to education for marginalized people. Her memoir \"Poor\" charts her journey as a child who grew up in extreme poverty to eventually studying in Trinity college <br /><hr><p style='color:grey; font-size:0.75em;'> Hosted on Acast. See <a style='color:grey;' target='_blank' rel='noopener noreferrer' href='https://acast.com/privacy'>acast.com/privacy</a> for more information.</p>",
+        "description": "Dr. Katriona O Sullivan is a psychologist whose work centers around the impact of poverty on a person's development. She works towards improving access to education for marginalized people. Her memoir \"Poor\" charts her journey as a child who grew up in extreme poverty to eventually studying in Trinity college ",
         "audioUrl": "https://sphinx.acast.com/p/acast/s/blindboy/e/64ee8ba80ead910011ab4a1b/media.mp3"
       },
       {
         "uuid": "0a409d93-18c8-48e9-aec1-7db3dc717517",
         "name": "The History of Brown Sauce and Door Handles",
-        "description": "The History of Brown Sauce and Door Handles&nbsp;<br /><hr><p style='color:grey; font-size:0.75em;'> Hosted on Acast. See <a style='color:grey;' target='_blank' rel='noopener noreferrer' href='https://acast.com/privacy'>acast.com/privacy</a> for more information.</p>",
+        "description": "The History of Brown Sauce and Door Handles",
         "audioUrl": "https://sphinx.acast.com/p/acast/s/blindboy/e/64e555e7447d34001103f199/media.mp3"
       },
       {
         "uuid": "76913e04-0ba6-4ee9-8d59-701478ac75c9",
         "name": "The Mental Health of Adults who live with their Parents",
-        "description": "A recent study found that 65% of Irish adults aged 25 to 35 live with their parents. I explore the impact of that on emotional wellbeing and identity <br /><hr><p style='color:grey; font-size:0.75em;'> Hosted on Acast. See <a style='color:grey;' target='_blank' rel='noopener noreferrer' href='https://acast.com/privacy'>acast.com/privacy</a> for more information.</p>",
+        "description": "A recent study found that 65% of Irish adults aged 25 to 35 live with their parents. I explore the impact of that on emotional wellbeing and identity",
         "audioUrl": "https://sphinx.acast.com/p/acast/s/blindboy/e/64dc144d22317600107879e3/media.mp3"
       },
       {
@@ -79,25 +79,25 @@ db.podcasts.insertMany([
       {
         "uuid": "1d813702-b91b-4763-9357-a7c44af2dd0d",
         "name": "S06 EP11: Joe Bor",
-        "description": "<p>S06E11 Joe Bor</p><p>In this episode Seann Walsh and Paul Mccaffrey are joined by Comedian &amp; Film maker Joe Bor to moan about Long films, Cinemas, Joe’s Mum’s massive cello &amp; summer holidays.</p><p><br></p><p>Please Subscribe, Rate &amp; Review</p><p><br></p><p>Make Sure To check out Joe’s new film The Oldest Comedy Club In Britain showing select theatres now.</p><p><br></p><p>Follow us on all our socials</p><p>Instagram - https://www.instagram.com/whatsupsetyounow/?hl=en Tik Tok - https://www.tiktok.com/@whatsupsetyounow</p><p>Youtube - https://www.youtube.com/channel/UCaxpHApCFQpOK_oUYm34jwg</p><p><br></p><p><br></p><p>And for those of you who said that 15 minutes was not enough head on over to www.patreon.com/wuyn where you can support the podcast and get access to full hour long episodes, New sections, Early access to ad free guest episodes, An opportunity to be on the podcast and much more!!”</p><p> </p><p>Learn more about your ad choices. Visit <a href=\"https://podcastchoices.com/adchoices\">podcastchoices.com/adchoices</a></p>",
+        "description": "In this episode Seann Walsh and Paul Mccaffrey are joined by Comedian &amp; Film maker Joe Bor to moan about Long films, Cinemas, Joe’s Mum’s massive cello &amp; summer holidays.</p><p><br></p><p>Please Subscribe, Rate &amp; Review</p><p><br></p><p>Make Sure To check out Joe’s new film The Oldest Comedy Club In Britain showing select theatres now.</p><p><br></p><p>Follow us on all our socials</p><p>Instagram - https://www.instagram.com/whatsupsetyounow/?hl=en Tik Tok - https://www.tiktok.com/@whatsupsetyounow</p><p>Youtube - https://www.youtube.com/channel/UCaxpHApCFQpOK_oUYm34jwg</p><p><br></p><p><br></p><p>And for those of you who said that 15 minutes was not enough head on over to www.patreon.com/wuyn where you can support the podcast and get access to full hour long episodes, New sections, Early access to ad free guest episodes, An opportunity to be on the podcast and much more!!”</p><p> </p><p>Learn more about your ad choices. Visit <a href=\"https://podcastchoices.com/adchoices\">podcastchoices.com/adchoices</a></p>",
         "audioUrl": "https://traffic.megaphone.fm/GLT5325920178.mp3?updated=1693254783"
       },
       {
         "uuid": "01d60d0f-2e42-44e2-a125-7abb74109f5c",
         "name": "S06 E10: Bananas Are Not The Best When They’re Green",
-        "description": "<p>In this episode Seann Walsh and Paul Mccaffrey moan about Paul’s festival gig in the rain and Seann’s social media nightmare</p><p><br></p><p>Be Sure to subscribe to our YouTube channel and WATCH this episode live in the studio</p><p>Youtube - https://www.youtube.com/channel/</p><p><br></p><p>And if you would like to hear the full 1 hour + episode head on over to https://www.patreon.com/wuyn where you can support the podcast and get access to full hour long episodes, New sections, Early access to ad free guest episodes, An opportunity to be on the podcast and much more!!</p><p><br></p><p>We have over 100 hours of extended episodes available exclusively to Patreon starting at just £3 a month so come and join the WUYN community.</p><p> </p><p>Learn more about your ad choices. Visit <a href=\"https://podcastchoices.com/adchoices\">podcastchoices.com/adchoices</a></p>",
+        "description": "In this episode Seann Walsh and Paul Mccaffrey moan about Paul’s festival gig in the rain and Seann’s social media nightmare</p><p><br></p><p>Be Sure to subscribe to our YouTube channel and WATCH this episode live in the studio</p><p>Youtube - https://www.youtube.com/channel/</p><p><br></p><p>And if you would like to hear the full 1 hour + episode head on over to https://www.patreon.com/wuyn where you can support the podcast and get access to full hour long episodes, New sections, Early access to ad free guest episodes, An opportunity to be on the podcast and much more!!</p><p><br></p><p>We have over 100 hours of extended episodes available exclusively to Patreon starting at just £3 a month so come and join the WUYN community.</p><p> </p><p>Learn more about your ad choices. Visit <a href=\"https://podcastchoices.com/adchoices\">podcastchoices.com/adchoices</a></p>",
         "audioUrl": "https://traffic.megaphone.fm/GLT9399862997.mp3?updated=1692634692"
       },
       {
         "uuid": "04a90c0d-1214-41cc-ae6f-98a933b27580",
         "name": "S06 E09: Tom Speight",
-        "description": "<p>S06E09 Tom Speight</p><p>In this episode Seann Walsh and Paul Mccaffrey are joined by Musician Tom Speight to moan about The word Latte, Being asked what you do, Voice notes &amp; The Merchants Of Banter.</p><p><br></p><p>Please Subscribe, Rate &amp; Review</p><p><br></p><p>Follow Tom on Instagram @tomspeightmusic or check out www.tomspeightmusic.com to get tickets to his shows and all music links.</p><p><br></p><p>Follow us on all our socials</p><p>Instagram - <a href=\"https://www.instagram.com/whatsupsetyounow/?hl=en\">HERE</a></p><p>Tik Tok - <a href=\"https://www.tiktok.com/@whatsupsetyounow\">HERE</a></p><p>Youtube - <a href=\"https://www.youtube.com/channel/UCaxpHApCFQpOK_oUYm34jwg\">HERE</a></p><p><br></p><p>And for those of you who said that 15 minutes was not enough head on over to www.patreon.com/wuyn where you can support the podcast and get access to full hour long episodes, New sections, Early access to ad free guest episodes, An opportunity to be on the podcast and much more!!</p><p> </p><p>Learn more about your ad choices. Visit <a href=\"https://podcastchoices.com/adchoices\">podcastchoices.com/adchoices</a></p>",
+        "description": "In this episode Seann Walsh and Paul Mccaffrey are joined by Musician Tom Speight to moan about The word Latte, Being asked what you do, Voice notes &amp; The Merchants Of Banter.</p><p><br></p><p>Please Subscribe, Rate &amp; Review</p><p><br></p><p>Follow Tom on Instagram @tomspeightmusic or check out www.tomspeightmusic.com to get tickets to his shows and all music links.</p><p><br></p><p>Follow us on all our socials</p><p>Instagram - <a href=\"https://www.instagram.com/whatsupsetyounow/?hl=en\">HERE</a></p><p>Tik Tok - <a href=\"https://www.tiktok.com/@whatsupsetyounow\">HERE</a></p><p>Youtube - <a href=\"https://www.youtube.com/channel/UCaxpHApCFQpOK_oUYm34jwg\">HERE</a></p><p><br></p><p>And for those of you who said that 15 minutes was not enough head on over to www.patreon.com/wuyn where you can support the podcast and get access to full hour long episodes, New sections, Early access to ad free guest episodes, An opportunity to be on the podcast and much more!!</p><p> </p><p>Learn more about your ad choices. Visit <a href=\"https://podcastchoices.com/adchoices\">podcastchoices.com/adchoices</a></p>",
         "audioUrl": "https://traffic.megaphone.fm/GLT8718832357.mp3?updated=1692634487"
       },
       {
         "uuid": "2c7dafab-c9d4-4a6e-91f6-f00745c3520e",
         "name": "S06 E08: I Got Runners Dick",
-        "description": "<p>S06E08 - I Got Runners Dick</p><p><br></p><p>In this episode Seann Walsh and Paul Mccaffrey hear from YOU the listener and find out what’s irritating the British public this week.</p><p><br></p><p>Be Sure to subscribe to our YouTube channel and WATCH this episode live in the studio </p><p><br></p><p>Youtube - <a href=\"https://www.youtube.com/channel/\">https://www.youtube.com/channel/</a></p><p><br></p><p>And if you would like to hear the full 1 hour + episode head on over to <a href=\"https://www.patreon.com/wuyn\">https://www.patreon.com/wuyn</a> where you can support the podcast and get access to full hour long episodes, New sections, Early access to ad free guest episodes, An opportunity to be on the podcast and much more!! </p><p>We have over 100 hours of extended episodes available exclusively to Patreon starting at just £3 a month so come and join the WUYN community.</p><p><br></p><p><br></p><p>A 'Keep It Light Media' Production </p><p>Sales, advertising, and general enquiries: <strong>hello@keepitlightmedia.com</strong></p><p> </p><p>Learn more about your ad choices. Visit <a href=\"https://podcastchoices.com/adchoices\">podcastchoices.com/adchoices</a></p>",
+        "description": "In this episode Seann Walsh and Paul Mccaffrey hear from YOU the listener and find out what’s irritating the British public this week.</p><p><br></p><p>Be Sure to subscribe to our YouTube channel and WATCH this episode live in the studio </p><p><br></p><p>Youtube - <a href=\"https://www.youtube.com/channel/\">https://www.youtube.com/channel/</a></p><p><br></p><p>And if you would like to hear the full 1 hour + episode head on over to <a href=\"https://www.patreon.com/wuyn\">https://www.patreon.com/wuyn</a> where you can support the podcast and get access to full hour long episodes, New sections, Early access to ad free guest episodes, An opportunity to be on the podcast and much more!! </p><p>We have over 100 hours of extended episodes available exclusively to Patreon starting at just £3 a month so come and join the WUYN community.</p><p><br></p><p><br></p><p>A 'Keep It Light Media' Production </p><p>Sales, advertising, and general enquiries: <strong>hello@keepitlightmedia.com</strong></p><p> </p><p>Learn more about your ad choices. Visit <a href=\"https://podcastchoices.com/adchoices\">podcastchoices.com/adchoices</a></p>",
         "audioUrl": "https://traffic.megaphone.fm/GLT7736417713.mp3?updated=1691412049"
       }
     ]
@@ -105,7 +105,7 @@ db.podcasts.insertMany([
   {
     "uuid": "d32fde1d-6932-440d-a184-551dc93824bc",
     "name": "Happy Place",
-    "description": "Fearne Cotton talks to incredible people about life, love, loss, and everything in-between as she reveals what happiness means to them.<br /><hr><p style='color:grey; font-size:0.75em;'> Hosted on Acast. See <a style='color:grey;' target='_blank' rel='noopener noreferrer' href='https://acast.com/privacy'>acast.com/privacy</a> for more information.</p>",
+    "description": "Fearne Cotton talks to incredible people about life, love, loss, and everything in-between as she reveals what happiness means to them.",
     "genres": [
       "PODCASTSERIES_SOCIETY_AND_CULTURE_PERSONAL_JOURNALS",
       "PODCASTSERIES_SOCIETY_AND_CULTURE"
@@ -190,7 +190,7 @@ db.podcasts.insertMany([
   {
     "uuid": "675cbcee-a02d-42e1-9fb8-df81d4030431",
     "name": "Talk Art",
-    "description": "Actor Russell Tovey and gallerist Robert Diament host Talk Art, a podcast dedicated to the world of art featuring exclusive interviews with leading artists, curators &amp; gallerists, and even occasionally their talented friends from other industries like acting, music and journalism. Listen in to explore the magic of art and why it connects us all in such fantastic ways.&nbsp;Follow the official Instagram @TalkArt for images of artworks discussed in each episode and to follow Russell and Robert's latest art adventures.<br /><hr><p style='color:grey; font-size:0.75em;'> Hosted on Acast. See <a style='color:grey;' target='_blank' rel='noopener noreferrer' href='https://acast.com/privacy'>acast.com/privacy</a> for more information.</p>",
+    "description": "Actor Russell Tovey and gallerist Robert Diament host Talk Art, a podcast dedicated to the world of art featuring exclusive interviews with leading artists, curators &amp; gallerists, and even occasionally their talented friends from other industries like acting, music and journalism. Listen in to explore the magic of art and why it connects us all in such fantastic ways.",
     "genres": [
       "PODCASTSERIES_ARTS",
       "PODCASTSERIES_ARTS_VISUAL_ARTS"
@@ -481,7 +481,7 @@ db.podcasts.insertMany([
     {
       "uuid": "6a61240e-0bd4-469e-a8ef-c96746ac1344",
       "name": "Sober Bert | 2 Bears, 1 Cave Ep. 201",
-      "description": "<p>SPONSORS:</p><p>- Go to <a href=\"https://Saatva.com/theshit\">https://Saatva.com/theshit</a> to get $200 off ANY mattress of your choice.</p><p>Welcome back to another episode of 2 Bears, 1 Cave. This week, Tom Segura and Bert Kreischer discuss their favorite radio shows and podcasts, Scientology, how Peru lost Machu Picchu, what it takes to be an ambassador, and much more! Plus, Bert went to Jazzfest, and saw some of his favorite artists perform, and found some new favorites. Also, Bert is deciding to get sober to help ease his crazy schedule!</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://www.bertbertbert.com/tour\">https://www.bertbertbert.com/tour</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a></p>\n",
+      "description": "Welcome back to another episode of 2 Bears, 1 Cave. This week, Tom Segura and Bert Kreischer discuss their favorite radio shows and podcasts, Scientology, how Peru lost Machu Picchu, what it takes to be an ambassador, and much more! Plus, Bert went to Jazzfest, and saw some of his favorite artists perform, and found some new favorites. Also, Bert is deciding to get sober to help ease his crazy schedule!</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://www.bertbertbert.com/tour\">https://www.bertbertbert.com/tour</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a></p>\n",
       "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/8063fbab-45ba-43b8-b65a-468cc5752cdf/episodes/d71bf01c-71b5-466a-8f45-e4b25bc8deab/audio/128/default.mp3?aid=rss_feed&awCollectionId=8063fbab-45ba-43b8-b65a-468cc5752cdf&awEpisodeId=d71bf01c-71b5-466a-8f45-e4b25bc8deab&feed=xyBuzW92"
     },
     {
@@ -505,7 +505,7 @@ db.podcasts.insertMany([
     {
       "uuid": "68b6ce18-420a-47a3-bcc2-59133b1c4163",
       "name": "Wildest Shark Attacks w/ Theo Von | 2 Bears, 1 Cave Ep. 197",
-      "description": "<p>SPONSORS: </p><p>- Go to https://Saatva.com/theshit to get $200 off ANY mattress of your choice.</p><p><br />This week we have a very special 2 Bears 1 Cave with Tom Segura and guest bear Theo Von! They discuss having sunglass options, old school comedians with gimmicks, Matt Rife, and the evolution of getting on TV shows. They talk about Ole Miss and LSU College Football. They discuss how money has the potential to demotivate you and the feeling of making people laugh.</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://www.bertbertbert.com/tour\">https://www.bertbertbert.com/tour</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a></p>\n",
+      "description": "This week we have a very special 2 Bears 1 Cave with Tom Segura and guest bear Theo Von! They discuss having sunglass options, old school comedians with gimmicks, Matt Rife, and the evolution of getting on TV shows. They talk about Ole Miss and LSU College Football. They discuss how money has the potential to demotivate you and the feeling of making people laugh.</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://www.bertbertbert.com/tour\">https://www.bertbertbert.com/tour</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a></p>\n",
       "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/8063fbab-45ba-43b8-b65a-468cc5752cdf/episodes/fbc42d22-8bb0-4b9d-8c56-e563365ba085/audio/128/default.mp3?aid=rss_feed&awCollectionId=8063fbab-45ba-43b8-b65a-468cc5752cdf&awEpisodeId=fbc42d22-8bb0-4b9d-8c56-e563365ba085&feed=xyBuzW92"
     }
   ]
