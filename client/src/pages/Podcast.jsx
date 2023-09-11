@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import EpisodeList from '../components/Podcast/EpisodeList';
 import User from '../components/User/User';
 import styled from 'styled-components'; 
+import PodcastCard from '../Components/Home/PodcastCard';
 
 const PodcastName = styled.h1`
   text-align: center;
@@ -29,8 +30,27 @@ const PodcastDesc = styled.div`
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin: 1rem;
   max-width: 500px;
+  padding: 5px;
   margin-left: auto;
   margin-right: auto;
+`
+const PodcastInfo = styled.span`
+color: white;
+  display: flex;
+  max-width: 600px;
+  max-height: 283px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #33333389;
+  border: 1px solid #ddd;
+  border-radius: 12px; 
+  border: 1px solid #ddd;
+  border-radius: 14px;
 `
 
 const Podcast = () => {
@@ -62,8 +82,11 @@ const Podcast = () => {
 
   return (
     <>
-      <PodcastName>{podcast.name}</PodcastName>
+    <PodcastInfo>
+      <PodcastCard podcast={podcast} user={user} setUser={setUser} isHomePage={false}/>
+      {/* <PodcastName>{podcast.name}</PodcastName> */}
       <PodcastDesc>{podcast.description}</PodcastDesc>
+    </PodcastInfo>
       <EpisodeList podcast={podcast} user={user} setUser={setUser} />
     </>
   );
