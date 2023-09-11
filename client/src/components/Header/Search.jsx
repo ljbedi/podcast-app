@@ -8,7 +8,8 @@ const SearchBar = styled.input`
   border-radius: 5px;
   font-size: 16px;
   background-color: #FDC300;
-  color: white;
+  color: #333;
+  margin: 1rem 1rem;
   ::placeholder {
     color: white !important;
   }
@@ -29,7 +30,7 @@ const DropdownList = styled.ul`
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  color: white;
+  color: #333;;
   z-index: 2;
 `;
 
@@ -40,7 +41,7 @@ const DropdownItem = styled.li`
 
   a {
     text-decoration: none;
-    color: white;
+    color: #333;;
 
   }
 
