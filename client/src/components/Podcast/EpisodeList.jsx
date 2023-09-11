@@ -30,7 +30,7 @@ const EpisodeBlock = styled.ul`
     color: rgb(60,64,67);
     margin-top: 4px;
     white-space: pre-line;
-
+    background-color: ;
     margin-left: auto;
     margin-right: auto;
 `
