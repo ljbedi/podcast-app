@@ -89,7 +89,7 @@ const PodcastCard = ({ podcast, user, setUser, isHomePage }) => {
         </div>
       )}
       <PodcastDetails >
-        <h4>{name}</h4>
+        <h4>{name} </h4>
       </PodcastDetails>
       <HeartIcon
         icon={faHeart}

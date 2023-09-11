@@ -35,6 +35,7 @@ const SubscribedPodcast = ({ podcasts, user, setUser }) => {
               podcast={podcast}
               user={user}
               setUser={setUser}
+              isHomePage={true}
             />
           ))}
       </SubbedPods>
